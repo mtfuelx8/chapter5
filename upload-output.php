@@ -3,7 +3,7 @@
 <?php
   $cfg['ALLOW_MIME'] = ['image/jpeg', 'image/gif', 'image/png'] ;
 
-  function checkMIME($filename) {
+  function checkMIME($tmp_name) {
     global $cfg;
     $mime = mime_content_type($tmp_name);
     return in_array($mime, $cfg['ALLOW_MIME']);
